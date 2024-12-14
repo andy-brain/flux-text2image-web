@@ -1,0 +1,23 @@
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Development files
+README.md
+*.log
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Unnecessary files
+node_modules
+npm-debug.log
+.vscode
+.idea

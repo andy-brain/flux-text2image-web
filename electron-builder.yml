@@ -1,0 +1,24 @@
+appId: com.yourcompany.flux2
+productName: Flux2
+directories:
+  output: dist
+files:
+  - '**/*'
+  - '!**/*.ts'
+  - '!*.code-workspace'
+  - '!LICENSE.md'
+  - '!package.json'
+  - '!package-lock.json'
+  - '!src/'
+  - '!e2e/'
+  - '!hooks/'
+  - '!.angular-cli.json'
+  - '!_config.yml'
+  - '!karma.conf.js'
+  - '!tsconfig.json'
+  - '!tslint.json'
+win:
+  target: 
+    - nsis
+    - portable
+  icon: icon.ico

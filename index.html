@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLUX生成器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">FLUX生成器</h1>
+        <div class="content">
+            <div class="input-section">
+                <div class="form-group">
+                    <label for="serverUrl">服务器地址：</label>
+                    <input type="text" id="serverUrl" value="http://192.168.31.43:8188" class="input-field">
+                </div>
+                <div class="form-group">
+                    <label for="workflowFile">工作流文件：</label>
+                    <input type="text" id="workflowFile" value="flux-20miao-2.json" class="input-field">
+                    <button id="browseWorkflow" class="secondary-button">浏览...</button>
+                </div>
+                <div class="form-group">
+                    <label for="prompt">提示词：</label>
+                    <textarea id="prompt" placeholder="请输入提示词" class="input-field"></textarea>
+                </div>
+                <button id="generateBtn" class="generate-btn">生成图片</button>
+            </div>
+            <div class="image-section">
+                <div id="loadingIndicator" class="loading-indicator hidden">
+                    <div class="spinner"></div>
+                    <p>正在生成图片...</p>
+                    <div class="progress-info">
+                        <div class="progress-container">
+                            <div id="progress-bar" class="progress-bar"></div>
+                        </div>
+                        <div class="time-info">
+                            <div class="progress-text">
+                                <span id="progress-percent">0%</span>
+                                <span id="progress-step">准备中...</span>
+                            </div>
+                            <div class="time-text">
+                                <span id="elapsed-time">00:00</span>
+                                <span id="estimated-time">预计需要: 20秒</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="imageContainer" class="image-container">
+                    <img id="generatedImage" class="hidden">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

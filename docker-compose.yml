@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  flux-web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: flux-image-generator:latest
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      # 如果需要持久化或动态配置，可以取消注释并挂载
+      # - ./config:/usr/share/nginx/html/config
+      # - ./logs:/var/log/nginx
+    networks:
+      - flux-network
+
+networks:
+  flux-network:
+    driver: bridge
